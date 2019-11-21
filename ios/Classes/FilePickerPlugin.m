@@ -62,6 +62,8 @@
         [self resolvePickAudio];
     } else if([call.method isEqualToString:@"IMAGE"]) {
         [self resolvePickImage];
+    } else if([call.method isEqualToString:@"GALLERY"]) {
+        [self resolvePickGallery];
     } else {
         result(FlutterMethodNotImplemented);
         _result = nil;
@@ -127,6 +129,18 @@
     self.galleryPickerController.videoQuality = UIImagePickerControllerQualityTypeHigh;
     
     [self.viewController presentViewController:self.galleryPickerController animated:YES completion:nil];
+}
+
+- (void) resolvePickGallery {
+    
+    self.galleryPickerController = [[UIImagePickerController alloc] init];
+    self.galleryPickerController.delegate = self;
+    self.galleryPickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
+    self.galleryPickerController.mediaTypes = @[(NSString *)kUTTypeImage], @[(NSString*)kUTTypeMovie, (NSString*)kUTTypeAVIMovie, (NSString*)kUTTypeVideo, (NSString*)kUTTypeMPEG4];
+    self.galleryPickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    self.galleryPickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;
+    
+    [_viewController presentViewController:self.galleryPickerController animated:YES completion:nil];
 }
 
 #pragma mark - Delegates
