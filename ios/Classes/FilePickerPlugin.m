@@ -140,7 +140,7 @@
     self.galleryPickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     self.galleryPickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;
     
-    if #available(iOS 11.0, *) {
+    if (@available(iOS 10.0, *)) {
         self.galleryPickerController.videoExportPreset = AVAssetExportPresetPassthrough
     }
     
