@@ -136,7 +136,7 @@
     self.galleryPickerController = [[UIImagePickerController alloc] init];
     self.galleryPickerController.delegate = self;
     self.galleryPickerController.modalPresentationStyle = UIModalPresentationCurrentContext;
-    self.galleryPickerController.mediaTypes = @[(NSString *)kUTTypeImage], @[(NSString*)kUTTypeMovie, (NSString*)kUTTypeAVIMovie, (NSString*)kUTTypeVideo, (NSString*)kUTTypeMPEG4];
+    self.galleryPickerController.mediaTypes = @[(NSString *)kUTTypeImage, (NSString*)kUTTypeMovie, (NSString*)kUTTypeAVIMovie, (NSString*)kUTTypeVideo, (NSString*)kUTTypeMPEG4];
     self.galleryPickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     self.galleryPickerController.videoQuality = UIImagePickerControllerQualityTypeMedium;
     
