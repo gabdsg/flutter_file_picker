@@ -9,6 +9,7 @@ enum FileType {
   VIDEO,
   AUDIO,
   CUSTOM,
+  GALLERY,
 }
 
 class FilePicker {
@@ -89,6 +90,8 @@ class FilePicker {
         return 'AUDIO';
       case FileType.VIDEO:
         return 'VIDEO';
+      case FileType.GALLERY:
+        return 'GALLERY';
       case FileType.ANY:
         return 'ANY';
       case FileType.CUSTOM:
