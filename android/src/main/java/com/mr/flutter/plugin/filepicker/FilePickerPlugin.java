@@ -188,6 +188,8 @@ public class FilePickerPlugin implements MethodCallHandler {
         return "audio/*";
       case "IMAGE":
         return "image/*";
+      case "GALLERY":
+        return "image/*,video/*";
       case "VIDEO":
         return "video/*";
       case "ANY":
